@@ -456,9 +456,9 @@ function update() {
   }
 
   // Spawn obstacles
-  const minInterval = Math.max(50, 150 - game.score * 0.2);
+  const minInterval = Math.max(100, 300 - game.score * 0.3);
   game.spawnTimer += game.speed;
-  if (game.spawnTimer > minInterval + Math.random() * 60) {
+  if (game.spawnTimer > minInterval + Math.random() * 120) {
     spawnObstacle();
     game.spawnTimer = 0;
   }
