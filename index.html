@@ -42,7 +42,7 @@ const GROUND_Y = 250;
 const JUMP_VEL = -12.5;
 const INITIAL_SPEED = 6;
 const MAX_SPEED = 16;
-const SPEED_INTERVAL = 100; // score per speed-up
+const SPEED_INTERVAL = 150; // score per speed-up
 
 // ============ GAME STATE ============
 let game = {};
@@ -456,7 +456,7 @@ function update() {
   }
 
   // Spawn obstacles
-  const minInterval = Math.max(30, 90 - game.score * 0.3);
+  const minInterval = Math.max(50, 150 - game.score * 0.2);
   game.spawnTimer += game.speed;
   if (game.spawnTimer > minInterval + Math.random() * 60) {
     spawnObstacle();
